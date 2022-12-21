@@ -1,0 +1,15 @@
+package com.kruger.poo.lambdas;
+
+public class AppOperations {
+
+	public static void main(String[] args) {
+		
+		Operations op = (x,y)->{
+			System.out.println(x+y);
+		};
+		
+		op.imprimeSuma(4, 6);
+
+	}
+
+}

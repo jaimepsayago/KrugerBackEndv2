@@ -1,0 +1,5 @@
+package com.kruger.mvc.model;
+
+public class Factura {
+
+}

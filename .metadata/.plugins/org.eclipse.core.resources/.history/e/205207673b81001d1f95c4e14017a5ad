@@ -1,0 +1,14 @@
+package com.kruger.poo.lambdas;
+
+public class AppSintaxis {
+
+	public static void main(String[] args) {
+		// implementacion normal
+		
+		//crear un nuevo objeto 
+		ClassSintaxis interfaceNormal = new ClassSintaxis();
+		interfaceNormal.aceptar();
+
+	}
+
+}

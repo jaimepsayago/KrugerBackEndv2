@@ -1,0 +1,5 @@
+package com.kruger.poo.lambdas;
+
+public interface Sintaxis {
+
+}

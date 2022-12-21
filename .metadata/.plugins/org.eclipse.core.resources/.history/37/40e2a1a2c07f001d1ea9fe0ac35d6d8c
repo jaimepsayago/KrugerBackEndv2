@@ -1,0 +1,11 @@
+package com.kruger.mvc.service;
+
+public class MiServicio2 implements IServicio {
+
+	@Override
+	public String operacion() {
+		
+		return "ejecutando algun proceso importante complicado";
+	}
+
+}

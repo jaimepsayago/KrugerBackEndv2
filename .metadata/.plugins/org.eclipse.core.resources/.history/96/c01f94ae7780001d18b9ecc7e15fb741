@@ -1,0 +1,22 @@
+package com.kruger.poo.collections;
+
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+
+public class AppMapCollection {
+
+	public static void main(String[] args) {
+		//lectura de arrays con diferentes metodos
+				Estado estado1;
+				
+				//map
+				LinkedHashMap<Integer, Estado> estados = new LinkedHashMap<>();
+				//hashset
+				LinkedHashSet<Estado> listaEstadosHashSet= new LinkedHashSet<>();
+				
+				
+				
+
+	}
+
+}

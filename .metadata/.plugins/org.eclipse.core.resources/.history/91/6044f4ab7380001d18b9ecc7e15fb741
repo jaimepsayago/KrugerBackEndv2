@@ -1,0 +1,27 @@
+package com.kruger.poo.collections;
+
+import java.util.ArrayList;
+
+public class AppCollections {
+	
+	public static void main(String[] args) {
+	
+		Collections arrayCollection = new Collections();
+		arrayCollection.printArrays();
+		
+		//buscar\
+		int ubicacion = arrayCollection.buscar(3);
+		System.out.println("dato encontrado: " + ubicacion);
+		
+		//lectura de arrays con diferentes metodos
+		Estado estado1;
+		ArrayList<Estado> estados = ArrayList();
+		
+			
+		
+		
+	}
+	
+	
+
+}

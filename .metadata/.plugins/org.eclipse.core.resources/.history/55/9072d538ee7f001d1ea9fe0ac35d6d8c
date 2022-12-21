@@ -1,0 +1,11 @@
+package com.kruger.poo.controller;
+
+public class Snippet {
+	@GetMapping({"/index", "/", "", "/home"})
+	public String index(Model model) {
+		model.addAttribute("titulo", textoIndex);
+		return "index";
+	}
+	
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Form</title>
+<link th:href="@{/css/form-stylesheet.css}" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h2>Grade Portal</h2>
+		<form method="post" th:object="${grade}" th:action="@{/api/handleSubmit}">
+		<p style="color:red" th:errors="*{name}"></p>
+		<input type="text" placeholder="Name" th:field="*{name}">
+		 
+		<p style="color:red" th:errors="*{score}"></p>
+		<input type="text" placeholder="Score" th:field="*{score}">
+		
+		<p style="color:red" th:errors="*{name}"></p>
+		<input type="text" placeholder="Name" th:field="*{name}">
+		
+				
+		</form>
+	
+	
+	</div>
+
+</body>
+</html>

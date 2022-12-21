@@ -1,0 +1,44 @@
+package com.kruger.poo.interfaces;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+
+public class AppComensales {
+
+	public static void main(String[] args) {
+		// una lista de comensales
+		List<Comensal> listaComensales = Arrays.asList(new Comensal("jaime", 15, 2),
+				new Comensal("jaime", 15, 2),
+				new Comensal("juan", 15, 2),
+				new Comensal("h", 15, 2),
+				new Comensal("g", 15, 2),
+				new Comensal("f", 15, 2),
+				new Comensal("nne", 15, 2)
+				);
+		
+		//obtener el nombre de un dato de la lista
+		List<Object> nombreComensales =
+				getDataComensales(listaComensales, x->x.getNombre());
+		//recorrrdo
+		System.out.println("lista de nombres de comensales");
+		for(Object n:nombreComensales);
+			System.out.println("nombre " + n);
+		
+	}
+	//interface funcional
+	public static List<Object> getDataComensales
+		(List<Comensal> listCom, Function<Comensal,Object> func){
+		
+		//generar una lista para guardasr datos pesonalizados de los comensales\
+		List<Object> listaDatos = new ArrayList<>();
+		//iterar a traves de la lista de comensales que recibimos
+		for(Comensal comensal:listCom) {
+			listaDatos.add(func.apply(comensal));
+		}
+		return listaDatos;
+	}
+	
+
+}

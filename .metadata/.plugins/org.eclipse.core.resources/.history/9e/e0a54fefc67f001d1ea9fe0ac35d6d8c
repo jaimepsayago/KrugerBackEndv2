@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title th:text="${titulo}"></title>
+<link th:href="@{/css/grades-stylesheet.css}" rel="stylesheet">
+
+</head>
+<body>
+<h2 th:text="${titulo}"></h2>
+<h2 th:text="${factura.descripcion}"></h2>
+
+<div class="topnav">
+	Cliente:<span th:utext="${factura.cliente.nombre+ ' ' + factura.cliente.apellido}">
+	
+</div>
+
+<div class="container">
+	<h2>Detalle de la factura</h2>
+	<table id="table">
+		<thead>
+			<tr>
+				<th>Producto</th>
+				<th>Precio</th>
+				<th>Cantidad</th>
+				<th>total</th>			
+			</tr>
+		
+		</thead>
+		
+	
+	</table>
+
+</body>
+</html>

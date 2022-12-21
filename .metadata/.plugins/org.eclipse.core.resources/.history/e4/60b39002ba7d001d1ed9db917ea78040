@@ -1,0 +1,5 @@
+package com.kruger.mvc.controller;
+
+public class GradeController {
+
+}

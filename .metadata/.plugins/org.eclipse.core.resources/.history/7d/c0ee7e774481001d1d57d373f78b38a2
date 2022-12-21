@@ -1,0 +1,15 @@
+package com.kruger.poo.interfaces;
+
+import java.util.function.Function;
+
+public class AppFunction {
+
+	public static void main(String[] args) {
+		// implementar la interfaz function
+		Function<Integer, String> convertidor = x -> Integer.toString(x);
+		
+		System.out.println(convertidor.apply(12));
+
+	}
+
+}
