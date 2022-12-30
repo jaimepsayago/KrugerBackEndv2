@@ -24,19 +24,20 @@ public class FootballPlayerController {
 	public Iterable<FootBallPlayer> findAll(){
 		return service.findAll();
 	}
-	
+	@RequestMapping(value = "/save", method = RequestMethod.POST, produces = "application/json")
 	public FootBallPlayer save(@RequestBody FootBallPlayer entity) {
 		return service.save(entity);
 	}
-	
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.PUT, produces = "application/json")
 	public FootBallPlayer edit(@PathVariable Integer id, @RequestBody FootBallPlayer entity) {
 		return service.save(entity);
 	}
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
 	public void delete(@PathVariable Integer id) {
 		service.deleteById(id);
 	}
-	
-	public Optional<FootBallPlayer> findById(@PathVariable Integer id){
+	 @RequestMapping(value = "/show/{id}", method = RequestMethod.GET, produces = "application/json")
+	 public Optional<FootBallPlayer> findById(@PathVariable Integer id){
 		return service.findById(id);
 	}
 

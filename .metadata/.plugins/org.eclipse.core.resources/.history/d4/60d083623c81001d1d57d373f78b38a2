@@ -1,6 +1,0 @@
-package com.kruger.poo.lambdas;
-
-public interface Sintaxis {
-	public void aceptar(); //metodo abstracto
-	
-}
