@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: servicio.api
+  cloud:
+    config:
+     uri: http://localhost:4444
+
+##HTTP Server
+# server:
+#  port: 1111
+##Discovery Server Access
+# eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+#  instance:
+#    statusPageUrlPath: /infoCatalogo
+#    healthCheckUrlPath: /healthCatalogo
+#    metadataMap:
+#      appOwner: jaimepsayago
+#      description: aplicación ejemplo microservicio
