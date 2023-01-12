@@ -5,11 +5,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
+
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Data
+//@Data
+//@Document
 public class Order {
 	private UUID id;
 	private OrderStatus status;
@@ -19,9 +23,12 @@ public class Order {
 	
 	public Order(final UUID id,final Product product) {
 		this.id = id;
-		this.status = OrderStatus.CREATED;
 		this.orderItems = new ArrayList<>(Collections.singletonList(new OrderItem(product)));
+		this.status = OrderStatus.CREATED;
 		this.price = product.getPrice();
+	}
+	public Order() {
+		
 	}
 	
 	//mensajes
@@ -69,6 +76,58 @@ public class Order {
 			throw new DomainException("el producto no puede ser nulo");
 		}
 	}
+
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public OrderStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderStatus status) {
+		this.status = status;
+	}
+
+	public List<OrderItem> getOrderItems() {
+		return orderItems;
+	}
+
+	public void setOrderItems(List<OrderItem> orderItems) {
+		this.orderItems = orderItems;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, orderItems, price, status);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Order other = (Order) obj;
+		return Objects.equals(id, other.id) && Objects.equals(orderItems, other.orderItems)
+				&& Objects.equals(price, other.price) && status == other.status;
+	}
+	
+	
 }
 
 
